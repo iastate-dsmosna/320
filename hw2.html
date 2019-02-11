@@ -1,0 +1,29 @@
+<script>
+shift = parseInt(prompt("Enter shift"))
+intext = (prompt("Enter text"))
+outtext = ""
+
+for(i=0;i<intext.length;i++)
+{
+	x = intext.charCodeAt(i)
+   
+	if(x >= 65 && x <= 90)
+	{
+    	x -= 65;
+    	x += shift;
+    	x = x%26;
+    	x += 65;
+	}
+	if(x >=97 && x <= 122)
+	{
+    	x -= 97
+    	x += shift
+    	x = x % 26
+    	x += 97
+	}
+     
+	outtext += String.fromCharCode(x)
+     
+}
+alert(outtext) 
+</script>
